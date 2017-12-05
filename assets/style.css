@@ -1,0 +1,14 @@
+.container{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+
+}
+
+#letters a {
+	color: crimson;
+	background: black;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+	margin:1px;
