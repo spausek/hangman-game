@@ -3,6 +3,9 @@ var pokemonArray = ["Pikachu", "Meowth", "Machoke", "Koffing", "Charmander", "We
 //Choose Word at Random
 
  var randomNum = Math.floor(Math.random()*pokemonArray.length);
+ var rightLetter = []
+ var wrongLetter = []
+
 
  var selectedPokemon = pokemonArray[randomNum];
 
@@ -20,5 +23,25 @@ var pokemonArray = ["Pikachu", "Meowth", "Machoke", "Koffing", "Charmander", "We
  }
 
  console.log(generateUnderscore());
+
+ //User Letter guesses
+ document.addEventListener("keydown", (event) => {
+
+ 
+ 	var wordKey = String.fromCharCode(event.keyCode);
+ 	
+ 	if (selectedPokemon.indexOf(wordKey) > -1) {
+
+ 		
+ 	}
+
+
+
+
+ });
+
+ // Right array
+
+ // Wrong Array
 
 

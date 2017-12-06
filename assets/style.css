@@ -1,14 +1,17 @@
 .container{
-	width: 50%;
+	width: 60%;
 	margin: auto;
 	text-align: center;
 
 }
 
 #letters a {
-	color: crimson;
-	background: black;
+	color: yellow;
+	background: blue;
 	border-radius: 5px;
 	padding: 5px;
 	cursor: pointer;
 	margin:1px;
+
+}
+
