@@ -1,47 +1,135 @@
-var pokemonArray = ["Pikachu", "Meowth", "Machoke", "Koffing", "Charmander", "Weedle", "Ekans", "Muk"];
+var pokemonArray = ["pikachu", "meowth", "charmander", "koffing"];
 
-//Choose Word at Random
-
- var randomNum = Math.floor(Math.random()*pokemonArray.length);
- var rightLetter = []
- var wrongLetter = []
+//Variables
 
 
- var selectedPokemon = pokemonArray[randomNum];
+ var rightGuess = [];
 
+ var wrongGuess = [];
+ var wins = 0;
+ var losses = 0;
+ var playerGuess = [];
+ var randomPokemon;
  var underScore = [];
+ var correctLetter = 0;
+ var pokeBalls = 6;
+ var rightGuess = [];
+ var wrongGuess = [];
 
- var generateUnderscore = () => {
+ //Function Time!
 
- 	for (var i= 0; i < selectedPokemon.length; i++) {
 
- 		underScore.push("_");
+
+
+
+
+function choosePokemon(){
+
+	  randomPokemon = pokemonArray[Math.floor(Math.random() * pokemonArray.length)];
+	  console.log(randomPokemon);
+
+ 	for(var i = 0; i < randomPokemon.length; i++) {
+
+ 		underScore.push( " _ ");
+
+ 		document.getElementById("word-in-play").textContent = underScore.join(" ");
+
  		
- 	}
+ 		 		
+ 		}
 
- 	return underScore;
- }
+ 	document.getElementById("wins").textContent = wins;
+ 	document.getElementById("losses").textContent = losses;
+ 	document.getElementById("poke-balls").textContent = pokeBalls;
 
- console.log(generateUnderscore());
+}
 
- //User Letter guesses
- document.addEventListener("keydown", (event) => {
+
+
+
+
+
+document.onkeyup = function(event) {
+
+
+    if (!(event.which <= 90 && event.which >= 65)) return
+
+	userInput = event.key
+
 
  
- 	var wordKey = String.fromCharCode(event.keyCode);
+ if (randomPokemon.indexOf(userInput) > -1) {
+
+		for(var i = 0; i < randomPokemon.length; i ++) {
+
+			if(randomPokemon[i] === userInput) {
+				
+
+			underScore[i] = userInput;
+			console.log(underScore);
+			correctLetter ++;
+			console.log(correctLetter);
+			winOrLose();
+			document.getElementById("word-in-play").textContent = underScore.join(" ");
+			
+
+
+			}	
+		}
+	}
+
+	else {
+		wrongGuess.push(userInput);
+		pokeBalls --;
+		document.getElementById("poke-balls").textContent = pokeBalls;
+		document.getElementById("wrong-letter").textContent = wrongGuess;
+		winOrLose();
+
+		}
+	}
+	
+	function winOrLose (){
+		if (correctLetter === randomPokemon.length) {
+			setTimeout(function(){
+			alert("You win!");
+			wins ++;
+			document.getElementById("wins").textContent = wins;
+			document.getElementById("word-in-play").textContent = ("    ");
+			wrongGuess= [];
+			document.getElementById("wrong-letter").textContent = (" ")
+
+			}, 500);
+
+						
+
+		}
+
+		else if (pokeBalls === 0) {
+			
+			setTimeout(function(){
+			alert("You Lose");
+			wrongGuess = [];
+			losses ++;
+			document.getElementById("losses").textContent = losses;
+
+			}, 500);
+			 
+
+		}
+
+	}
+
+	//reset
+
+
+
+
+	
+choosePokemon();
+
+
+
+
+	 	
+
  	
- 	if (selectedPokemon.indexOf(wordKey) > -1) {
-
- 		
- 	}
-
-
-
-
- });
-
- // Right array
-
- // Wrong Array
-
-

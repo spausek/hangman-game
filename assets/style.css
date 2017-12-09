@@ -1,17 +1,30 @@
-.container{
+.container {
 	width: 60%;
 	margin: auto;
 	text-align: center;
 
 }
 
-#letters a {
-	color: yellow;
-	background: blue;
-	border-radius: 5px;
-	padding: 5px;
-	cursor: pointer;
-	margin:1px;
+.class {
+	width: 60%;
+}
+
+img {
+	width: 200px;
+	height:200px;
+	position: absolute;
+	left: 530px;
+	visibility: hidden;
+
 
 }
+
+.bulbasaur {
+	
+
+
+}
+
+
+
 
