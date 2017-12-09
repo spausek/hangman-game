@@ -2,26 +2,25 @@
 	width: 60%;
 	margin: auto;
 	text-align: center;
+	background: white;
+	border: solid 1px #6495ED;
 
-}
+	}
 
-.class {
-	width: 60%;
-}
-
-img {
-	width: 200px;
-	height:200px;
-	position: absolute;
-	left: 530px;
-	visibility: hidden;
-
-
-}
-
-.bulbasaur {
+p, h1 {
+	font-family: 'Oswald', sans-serif;
+		  
 	
 
+	}
+
+.class {
+	 width: 60%;
+	}
+
+body {
+
+	background: url(./images/background.jpg);
 
 }
 

@@ -4,7 +4,6 @@ var pokemonArray = ["pikachu", "meowth", "charmander", "koffing"];
 
 
  var rightGuess = [];
-
  var wrongGuess = [];
  var wins = 0;
  var losses = 0;
@@ -13,13 +12,8 @@ var pokemonArray = ["pikachu", "meowth", "charmander", "koffing"];
  var underScore = [];
  var correctLetter = 0;
  var pokeBalls = 6;
- var rightGuess = [];
- var wrongGuess = [];
-
- //Function Time!
-
-
-
+ 
+ //Start
 
 
 
@@ -119,13 +113,17 @@ document.onkeyup = function(event) {
 
 	}
 
-	//reset
+
+
+	choosePokemon();
+
+	
 
 
 
 
 	
-choosePokemon();
+
 
 
 
